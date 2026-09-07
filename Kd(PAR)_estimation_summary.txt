@@ -1,0 +1,33 @@
+Data Summary for Kd(PAR)_estimation.xlsx
+
+1. File Information
+- File name: Kd(PAR)_estimation.xlsx
+- Content: Annual summer diffuse attenuation coefficient for photosynthetically active radiation [Kd(PAR)] for Chinese lakes from 2003 to 2024, together with lake attributes and summary statistics.
+- Rows: Each row corresponds to one unique lake.
+- Columns: Lake metadata, annual Kd(PAR) values, and summary statistics.
+
+2. Variable Description
+
+Lake metadata
+- Hylak_id (integer): Unique identifier of the lake.
+- HH_zone (string): Location relative to the Hu Huanyong Line (east or west).
+- Lake_type (string): Depth group used in the study (shallow lakes or deep lakes).
+- Lake_area (float, km^2): Lake surface area.
+- Pour_long, Pour_lat (float, decimal degrees): Pour-point longitude and latitude.
+- Center_long, Center_lat (float, decimal degrees): Lake-center longitude and latitude.
+
+Annual Kd(PAR), 2003-2024
+- 2003 ... 2024 (float, m^-1): Annual summer mean Kd(PAR) retrieved using the Gradient Boosting Tree model.
+- Missing cells indicate that no valid annual value was available for that lake-year.
+
+Derived statistics
+- Mean (float, m^-1): Arithmetic mean of available annual Kd(PAR) values.
+- Sen_rate (float, m^-1 decade^-1): Theil-Sen slope of Kd(PAR) change per decade.
+
+3. Data Structure and Quality Notes
+- Number of lake rows: 966.
+- Unique Hylak_id values: 966.
+- Lakes with at least one annual value and a calculated mean: 916.
+- Lakes with a calculated Theil-Sen trend: 909.
+- Fifty lakes have no valid annual Kd(PAR) value during 2003-2024.
+- Blank cells indicate unavailable values.
